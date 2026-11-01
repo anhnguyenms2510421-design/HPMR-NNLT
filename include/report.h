@@ -29,7 +29,8 @@ int  report_find_best(const history *h);
 /* Ghi output/report.txt: HPWL tung iteration + best case + % giam so voi ban dau */
 int  report_write(const char *path, const history *h);
 
-/* Ghi output/placement_result.csv: ref, x, y, width, height cua tung linh kien */
+/* Ghi output/placement_result.csv, header ref,x,y,width,height,is_placed
+   (cung dinh dang components.csv) */
 int  report_write_placement(const char *path, const database *db);
 
 #endif

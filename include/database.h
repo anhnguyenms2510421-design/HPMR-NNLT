@@ -11,13 +11,13 @@
 
 #include "config.h"
 
-/* ===== board.csv: 1 dong ===== */
+/* ===== board.csv: 1 dong, cot x_min,y_min,x_max,y_max -> x_start,y_start,x_end,y_end ===== */
 typedef struct {
     float x_start, y_start, x_end, y_end;
 } board_dimension;
 
 /* ===== components.csv: 1 dong = 1 linh kien =====
-   (x, y) la TAM linh kien. */
+   (x, y) la TAM linh kien. Cot is_placed cua CSV -> truong placed. */
 typedef struct {
     char  ref[MAX_REF_LEN];
     float x, y;
@@ -25,7 +25,7 @@ typedef struct {
     int   placed;            /* 0 = chua dat (dang ngoai board), 1 = da dat */
 } component;
 
-/* ===== pad.csv: 1 dong = 1 pad =====
+/* ===== pads.csv: 1 dong = 1 pad =====
    (dx, dy) la offset cua pad so voi tam linh kien.
    Vi tri pad tren board = (comp.x + dx, comp.y + dy). */
 typedef struct {
