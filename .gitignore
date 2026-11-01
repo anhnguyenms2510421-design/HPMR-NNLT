@@ -1,0 +1,14 @@
+# Build
+*.o
+*.d
+placer
+placer.exe
+/test_*
+!test_*.c
+
+# Output sinh ra khi chạy (giữ lại thư mục)
+output/*
+!output/.gitkeep
+
+# Editor
+.vscode/

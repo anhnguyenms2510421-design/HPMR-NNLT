@@ -14,7 +14,7 @@
 /* ===== Duong dan input / output (chay tu thu muc goc cua project) ===== */
 #define BOARD_FILE       "input_data/board.csv"
 #define COMPONENTS_FILE  "input_data/components.csv"
-#define PAD_FILE         "input_data/pad.csv"
+#define PAD_FILE         "input_data/pads.csv"
 #define REPORT_FILE      "output/report.txt"
 #define RESULT_FILE      "output/placement_result.csv"
 
