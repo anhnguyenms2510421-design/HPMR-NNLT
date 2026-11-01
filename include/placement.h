@@ -4,15 +4,19 @@
 #include "database.h"
 #include "report.h"
 
-/* [tv3] Thuat toan dat linh kien + Hill Climbing.
+/* [tv3] place_initial, place_component, place_all  (src/placement.c)
+   [tv4] try_move, hill_climb                       (src/hill_climb.c)
    Tat ca ham chi dat/di chuyen linh kien sao cho drc_check_component() = 1. */
 
-/* Chon ngau nhien 1 linh kien, dat vao vi tri hop le tren board, placed = 1.
-   Goi srand() truoc (main.c lam). STATUS_ERR neu khong co linh kien/khong dat duoc. */
+/* Chon ngau nhien 1 linh kien (placed == 0) va dat TAM no giua board:
+   x = (x_start + x_end)/2, y = (y_start + y_end)/2; placed = 1.
+   Goi srand() truoc (main.c lam). STATUS_ERR (placed van 0) neu khong co
+   linh kien hoac vi tri giua board vi pham DRC. */
 int   place_initial(database *db);
 
 /* Dat linh kien thu n+1 (comp_idx, dang placed = 0) vao vi tri hop le
-   co total_hpwl nho nhat. STATUS_ERR neu khong tim duoc cho. */
+   co total_hpwl nho nhat (quet luoi tam buoc STEP). Hoa HPWL: chon vi tri
+   gan tam board nhat. STATUS_ERR (placed van 0) neu khong tim duoc cho. */
 int   place_component(database *db, int comp_idx);
 
 /* place_initial() roi place_component() cho tung linh kien con lai

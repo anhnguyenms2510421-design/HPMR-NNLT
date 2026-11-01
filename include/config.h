@@ -20,6 +20,9 @@
 
 /* ===== Tham so thuat toan ===== */
 #define MAX_ITER   1000         /* so vong lap toi da cua hill climbing */
+#define NUM_RESTARTS  10        /* so lan chay doc lap (moi lan chon linh kien dau khac nhau);
+                                   lay lan co HPWL cuoi nho nhat. Chi co toi da MAX_COMPONENTS
+                                   linh kien dau khac nhau nen khong can dat qua lon */
 #define STEP       1.0f         /* buoc dich moi lan thu */
 #define CLEARANCE  0.2f         /* khoang cach toi thieu giua 2 linh kien */
 
