@@ -30,5 +30,5 @@ git push origin <tên branch>
 \\
 * Pull code từ main:
 //
-git p//ull origin main
+git pull origin main
 \\
