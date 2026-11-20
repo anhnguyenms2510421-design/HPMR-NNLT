@@ -1,6 +1,7 @@
 # Build
 *.o
 *.d
+*.exe
 placer
 placer.exe
 /test_*
